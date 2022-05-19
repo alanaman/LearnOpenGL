@@ -32,3 +32,5 @@
 *.app
 
 build
+ext
+inc/glm
