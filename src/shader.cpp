@@ -21,31 +21,31 @@ ShaderProgramSource ParseShader(const std::string& filepath);
     }
     void Shader::use()
     {
-        GLCall(glUseProgram(ID));
+        (glUseProgram(ID));
     }
     void Shader::setBool(const std::string &name, bool value) const
     {         
-        GLCall(glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value)); 
+        (glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value)); 
     }
     void Shader::setInt(const std::string &name, int value) const
     { 
-        GLCall(glUniform1i(glGetUniformLocation(ID, name.c_str()), value)); 
+        (glUniform1i(glGetUniformLocation(ID, name.c_str()), value)); 
     }
     void Shader::setFloat(const std::string &name, float value) const
     { 
-        GLCall(glUniform1f(glGetUniformLocation(ID, name.c_str()), value)); 
+        (glUniform1f(glGetUniformLocation(ID, name.c_str()), value)); 
     }
     void Shader::setMat4(const std::string &name, glm::mat4 value) const
     { 
-        GLCall(glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value)));
+        (glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value)));
     }
     void Shader::setVec3(const std::string &name, float x, float y, float z) const
     {
-        GLCall(glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z));
+        (glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z));
     }
     void Shader::setVec3(const std::string &name, glm::vec3 value) const
     {
-        GLCall(glUniform3f(glGetUniformLocation(ID, name.c_str()), value.x, value.y, value.z));
+        (glUniform3f(glGetUniformLocation(ID, name.c_str()), value.x, value.y, value.z));
     }
 
     void Shader::deleteShader()

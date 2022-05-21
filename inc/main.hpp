@@ -10,7 +10,6 @@
 #include <string>
 #include <vector>
 
-#include "glerror_handler.hpp"
 #include "shader.hpp"
 #include "camera.hpp"
 
